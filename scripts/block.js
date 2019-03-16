@@ -23,13 +23,13 @@ class Block {
 	hitWall() {
 		return (this.x < 0);
 	}
-}
-update() {
-	this.x += this.velocity;
-}
-render() {
-	nostroke();
-	fill(255, 0, 0);
-	rect(this.x, this.y, this.w, this.w)
-}
+
+	update() {
+		this.x += this.velocity;
+	}
+	render() {
+		nostroke();
+		fill(255, 0, 0);
+		rect(this.x, this.y, this.w, this.w)
+	}
 }

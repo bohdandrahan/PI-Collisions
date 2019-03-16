@@ -2,10 +2,15 @@ let smallBlock;
 let bigBlock;
 let clack;
 
+
 function preload() {
-	clack = loadSound('../sounds/clack.wav');
+	clack = loadSound('./clack.wav');
 }
 
-funciton setup() {
-	createCanvas(600, 500)
+function setup() {
+	createCanvas(600, 500);
+}
+
+function draw() {
+	background(100)
 }
