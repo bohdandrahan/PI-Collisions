@@ -1,5 +1,5 @@
 class Block {
-	constructor(x, w, v, m) {
+	constructor(x, w, velocity, mass) {
 		this.x = x;
 		this.y = height - w - 2;
 		this.w = w;
@@ -8,16 +8,16 @@ class Block {
 	}
 
 	collide(otherBlock) {
-		if (this.x + this.w < otherBlock.x || this.x > otherBlock.x + other.w) {
-			return False;
+		if (this.x + this.w < otherBlock.x || this.x > otherBlock.x + otherBlock.w) {
+			return false;
 		} else {
-			return True;
+			return true;
 		}
 	}
 	bounce(otherBlock) {
 		let totalMass = this.mass + otherBlock.mass;
 		let newVelocity = (this.mass - otherBlock.mass) / totalMass * this.velocity;
-		newVelocity += (2 * other.mass / totalMass) * otherBlock.velocity;
+		newVelocity += (2 * otherBlock.mass / totalMass) * otherBlock.velocity;
 		return newVelocity;
 	}
 	hitWall() {
@@ -28,7 +28,7 @@ class Block {
 		this.x += this.velocity;
 	}
 	render() {
-		nostroke();
+		noStroke();
 		fill(255, 0, 0);
 		rect(this.x, this.y, this.w, this.w)
 	}
