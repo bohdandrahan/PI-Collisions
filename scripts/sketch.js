@@ -3,7 +3,7 @@ let bigBlock;
 let clack;
 
 function preload() {
-	clack = loadSound('.sounds/clack.wav');
+	clack = loadSound('../sounds/clack.wav');
 }
 
 funciton setup() {
